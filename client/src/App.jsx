@@ -21,7 +21,7 @@ function App() {
 
   useEffect(() => {
     if (user) {
-      const socketio = io("https://socialloop-server.onrender.com", {
+      const socketio = io("https://socialloop.onrender.com", {
         query: {
           userId: user?.userProfile._id,
         },

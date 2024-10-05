@@ -14,7 +14,7 @@ const useGetUserProfile = (userId) => {
     const fetchUserProfile = async () => {
       try {
         const res = await axios.get(
-          `https://socialloop-server.onrender.com/api/v1/users/${userId}/profile`,
+          `https://socialloop.onrender.com/api/v1/users/${userId}/profile`,
           { withCredentials: true }
         );
 

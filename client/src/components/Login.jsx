@@ -30,7 +30,7 @@ const Login = () => {
     setLoading(true);
     try {
       const res = await axios.post(
-        "https://socialloop-server.onrender.com/api/v1/users/login",
+        "https://socialloop.onrender.com/api/v1/users/login",
         input,
         {
           headers: {

@@ -22,7 +22,7 @@ const ChatPage = () => {
   const sendMessageHandler = async (receiverId) => {
     try {
       const res = await axios.post(
-        `https://socialloop-server.onrender.com/api/v1/messages/${receiverId}/send`,
+        `https://socialloop.onrender.com/api/v1/messages/${receiverId}/send`,
         { message: textMessage },
         {
           headers: {

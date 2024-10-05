@@ -28,7 +28,7 @@ const Profile = () => {
   const deletePost = async (postId) => {
     try {
       const res = await axios.delete(
-        `https://socialloop-server.onrender.com/api/v1/posts/${postId}/delete`,
+        `https://socialloop.onrender.com/api/v1/posts/${postId}/delete`,
         { withCredentials: true }
       );
       if (res.data.success) {
@@ -52,7 +52,7 @@ const Profile = () => {
   const followAndUnfollowHandler = async (userId) => {
     try {
       const res = await axios.get(
-        `https://socialloop-server.onrender.com/api/v1/follow/${userId}/follow-unfollow`,
+        `https://socialloop.onrender.com/api/v1/follow/${userId}/follow-unfollow`,
         { withCredentials: true }
       );
 

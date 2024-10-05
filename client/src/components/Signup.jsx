@@ -29,7 +29,7 @@ const Signup = () => {
     try {
       setLoading(true);
       const res = await axios.post(
-        "https://socialloop-server.onrender.com/api/v1/users/register",
+        "https://socialloop.onrender.com/api/v1/users/register",
         input,
         {
           headers: {

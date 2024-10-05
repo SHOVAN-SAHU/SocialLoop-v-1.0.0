@@ -33,7 +33,7 @@ const EditProfile = () => {
       if (confirmingDeletation) {
         setDeleteLoading(true);
         const res = await axios.delete(
-          "https://socialloop-server.onrender.com/api/v1/users/delete",
+          "https://socialloop.onrender.com/api/v1/users/delete",
           {
             withCredentials: true,
           }
@@ -85,7 +85,7 @@ const EditProfile = () => {
     if (input.profileImage) formData.append("profileImage", input.profileImage);
     try {
       const res = await axios.patch(
-        "https://socialloop-server.onrender.com/api/v1/users/edit-profile",
+        "https://socialloop.onrender.com/api/v1/users/edit-profile",
         formData,
         {
           headers: {

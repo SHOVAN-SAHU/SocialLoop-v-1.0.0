@@ -38,7 +38,7 @@ const CreatePost = () => {
     if (imagePreview) formData.append("image", file);
     try {
       const res = await axios.post(
-        "https://socialloop-server.onrender.com/api/v1/posts/add-post",
+        "https://socialloop.onrender.com/api/v1/posts/add-post",
         formData,
         {
           headers: {

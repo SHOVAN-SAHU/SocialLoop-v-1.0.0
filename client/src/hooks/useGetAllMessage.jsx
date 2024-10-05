@@ -14,7 +14,7 @@ const useGetAllMessages = () => {
     const fetchAllMessages = async () => {
       try {
         const res = await axios.get(
-          `https://socialloop-server.onrender.com/api/v1/messages/${selectedUser?._id}/get`,
+          `https://socialloop.onrender.com/api/v1/messages/${selectedUser?._id}/get`,
           { withCredentials: true }
         );
         if (res.data.success) {
