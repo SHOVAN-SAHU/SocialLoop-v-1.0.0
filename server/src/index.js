@@ -38,6 +38,7 @@ import messageRouter from "./routes/message.routes.js";
 app.use("/api/v1/messages", messageRouter);
 
 app.use(express.static(path.join(_dirname, "/client/dist")));
+app.use("/public", express.static(path.join(_dirname, "public")));
 app.get("*", (_, res) => {
   res.sendFile(path.resolve(_dirname, "client", "dist", "index.html"));
 });
