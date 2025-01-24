@@ -26,7 +26,7 @@ const Navbar = () => {
   const menuRef = useRef(null);
   const { user } = useSelector((store) => store.auth);
 
-  const sidebarItems = [
+  const navItems = [
     { icon: <Home className="w-5 h-5" />, text: "Home" },
     { icon: <Search className="w-5 h-5" />, text: "Search" },
     // { icon: <TrendingUp className="w-5 h-5" />, text: "Trending" },
@@ -66,6 +66,8 @@ const Navbar = () => {
       navigate(`/profile/${user?.userProfile._id}`);
     } else if (textType === "Message") {
       navigate("/chat");
+    } else if (textType === "Search") {
+      navigate("/search");
     }
   };
 
@@ -132,7 +134,7 @@ const Navbar = () => {
           <div className="flex" ref={menuRef}>
             <div className="flex flex-col w-[100%]">
               {menu &&
-                sidebarItems.map((item, i) => (
+                navItems.map((item, i) => (
                   <div
                     key={i}
                     className=" bg-white flex gap-2 cursor-pointer border border-gray-300 relative p-3 items-center  hover:bg-gray-100 w-full"
