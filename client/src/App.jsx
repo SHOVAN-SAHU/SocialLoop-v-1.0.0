@@ -13,6 +13,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setSocket } from "./redux/socketSlice";
 import { setOnlineUsers } from "./redux/chatSlice";
 import ProtectedRoutes from "./components/ProtectedRoutes";
+import Search from "./components/Search";
 
 function App() {
   const { user } = useSelector((store) => store.auth);
@@ -85,6 +86,14 @@ function App() {
             element={
               <ProtectedRoutes>
                 <ChatPage />
+              </ProtectedRoutes>
+            }
+          />
+          <Route
+            path="/search"
+            element={
+              <ProtectedRoutes>
+                <Search />
               </ProtectedRoutes>
             }
           />

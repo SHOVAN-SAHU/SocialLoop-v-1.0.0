@@ -79,6 +79,8 @@ const LeftSidebar = () => {
       navigate(`/profile/${user?.userProfile._id}`);
     } else if (textType === "Message") {
       navigate("/chat");
+    } else if (textType === "Search") {
+      navigate("/search");
     }
   };
 
